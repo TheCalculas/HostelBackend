@@ -1,13 +1,13 @@
 // create backend server
 
-const express = require('express');
-const fs = require('fs');
+const express = require("express");
+const fs = require("fs");
 const app = express();
 const mongoSanitize = require("express-mongo-sanitize");
 const path = require("node:path");
 const dirname = path.resolve();
 
-const cors = require('cors');
+const cors = require("cors");
 
 let PORT = 5000;
 
@@ -45,12 +45,9 @@ app.use(
 
 // });
 
-
 app.use("/uploads", express.static(path.join(dirname, "/uploads")));
-
 
 // connect to server
 app.listen(PORT, function () {
-    console.log("Server is running on Port: " + PORT);
-}
-);
+  console.log("Server is running on Port: " + PORT);
+});
